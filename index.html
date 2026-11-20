@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio — Iqbal Fadil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ======================================================================
+       FIXED FLOATING PILL NAVBAR (NO ADMIN BUTTON VISIBLE)
+  ====================================================================== -->
+    <header class="navbar-wrapper">
+      <div class="navbar-pill">
+        <a href="#home" class="brand-logo" id="nav-brand"
+          >Portfolio<span class="dot">.</span></a
+        >
+
+        <nav class="nav-links" id="desktop-nav">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            type="button"
+            class="icon-circle-btn"
+            id="theme-toggle-btn"
+            title="Ganti Tema Terang/Gelap"
+            aria-label="Toggle Dark Mode"
+          >
+            <span id="theme-icon">🌙</span>
+          </button>
+          <a href="#contact" class="btn-hire-nav">Hire Me</a>
+          <button
+            type="button"
+            class="icon-circle-btn mobile-menu-btn"
+            id="mobile-menu-toggle"
+            aria-label="Menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-dropdown" id="mobile-dropdown">
+        <a href="#home" class="accent-text">Home</a>
+        <a href="#about">About &amp; Pendidikan</a>
+        <a href="#skills">My Skills</a>
+        <a href="#projects">My Projects &amp; Karya</a>
+        <a href="#contact">Contact / Hire Me</a>
+      </div>
+    </header>
+
+    <!-- ======================================================================
+       MAIN BENTO CONTAINER
+  ====================================================================== -->
+    <main class="main-container">
+      <!-- 1. HERO SECTION -->
+      <section id="home" class="bento-card hero-section">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="social-row">
+              <a
+                id="hero-ig-link"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                class="social-tile tile-ig"
+                title="Instagram"
+                >IG</a
+              >
+              <a
+                id="hero-tt-link"
+                href="https://tiktok.com"
+                target="_blank"
+                rel="noreferrer"
+                class="social-tile tile-tt font-mono"
+                title="TikTok"
+                >TT</a
+              >
+              <a
+                id="hero-gh-link"
+                href="https://github.com"
+                target="_blank"
+                rel="noreferrer"
+                class="social-tile tile-gh font-mono"
+                title="GitHub"
+                >GH</a
+              >
+              <a
+                id="hero-yt-link"
+                href="https://youtube.com"
+                target="_blank"
+                rel="noreferrer"
+                class="social-tile tile-yt font-mono"
+                title="YouTube"
+                >YT</a
+              >
+            </div>
+
+            <div>
+              <h1 class="hero-title" id="hero-greeting">Hi, I'm Iqbal Fadil</h1>
+              <p class="hero-role" id="hero-role">
+                Information Systems Student &amp; Multidisciplinary Creator
+              </p>
+            </div>
+
+            <p class="hero-bio" id="hero-bio"></p>
+
+            <div class="hero-buttons">
+              <button type="button" class="btn-primary-pill" id="open-cv-btn">
+                <span>⬇</span>
+                <span>Download CV</span>
+              </button>
+              <a href="#contact" class="btn-outline-pill">
+                <span>✉</span>
+                <span>Contact Me</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-portrait-col">
+            <div class="portrait-wrapper">
+              <div class="portrait-glow"></div>
+              <div class="portrait-frame">
+                <div class="portrait-img-box">
+                  <img id="hero-portrait-img" src="" alt="Iqbal Fadil" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. TWO-COLUMN BENTO ROW: ABOUT ME + MY SKILLS -->
+      <div class="two-col-bento">
+        <!-- LEFT CARD: ABOUT ME & PENDIDIKAN / PENGALAMAN -->
+        <section id="about" class="bento-card bento-inner-pad">
+          <div class="about-header">
+            <h2 class="section-heading-md">
+              About <span class="accent-text">Me</span>
+            </h2>
+
+            <div class="tab-btn-group">
+              <button
+                type="button"
+                class="btn-tab-standalone active"
+                id="tab-btn-profile"
+              >
+                Profil
+              </button>
+              <button
+                type="button"
+                class="btn-tab-standalone"
+                id="tab-btn-timeline"
+              >
+                Pendidikan &amp; Pengalaman
+              </button>
+            </div>
+          </div>
+
+          <!-- View A: Profil -->
+          <div id="about-view-profile" class="about-profile-grid">
+            <div class="about-photo-wrap">
+              <div class="about-photo-bg"></div>
+              <img id="about-photo-img" src="" alt="Iqbal Fadil Studio" />
+            </div>
+
+            <div class="about-details">
+              <div class="about-summary-box" id="about-summary-text"></div>
+              <div class="stats-row" id="about-stats-row"></div>
+            </div>
+          </div>
+
+          <!-- View B: Pendidikan & Pengalaman -->
+          <div
+            id="about-view-timeline"
+            class="timeline-scroll"
+            style="display: none"
+          >
+            <div>
+              <div class="timeline-group-title">🎓 Pendidikan</div>
+              <div id="education-list-container"></div>
+            </div>
+            <div>
+              <div class="timeline-group-title">
+                💼 Pengalaman &amp; Kepanitiaan
+              </div>
+              <div id="experience-list-container"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RIGHT CARD: MY SKILLS -->
+        <section id="skills" class="bento-card bento-inner-pad">
+          <div class="skills-header">
+            <h2 class="section-heading-md">
+              My <span class="accent-text">Skills</span>
+            </h2>
+            <p class="skills-subtitle">
+              Perangkat kreatif &amp; teknologi yang saya gunakan dalam produksi
+              karya dan sistem
+            </p>
+          </div>
+          <div class="skills-grid" id="skills-grid-container"></div>
+        </section>
+      </div>
+
+      <!-- 3. MY PROJECTS & KARYA (BLENDED WITH #071B2B BACKGROUND) -->
+      <section id="projects" class="projects-section">
+        <div class="projects-header">
+          <h2 class="projects-title">
+            My <span class="accent-bright">Projects</span> &amp; Karya
+          </h2>
+          <p class="projects-subtitle">
+            Kurasi karya lintas disiplin: Fotografi, Videografi, Desain Grafis,
+            dan Project Coding
+          </p>
+        </div>
+
+        <div class="filter-pills" id="work-filter-pills"></div>
+        <div class="projects-grid" id="projects-grid-container"></div>
+        <div
+          id="show-more-works-wrap"
+          style="text-align: center; margin-top: 2rem; display: none"
+        >
+          <button
+            type="button"
+            class="btn-primary-pill"
+            id="btn-toggle-all-works"
+          ></button>
+        </div>
+      </section>
+
+      <!-- 4. GET IN TOUCH SECTION (MAPS IFRAME + CONTACT FORM) -->
+      <section id="contact" class="bento-card contact-inner">
+        <div class="contact-header">
+          <h2 class="section-heading-md">
+            Get In <span class="accent-text">Touch</span>
+          </h2>
+          <p class="skills-subtitle">
+            Mari diskusikan project fotografi, video, desain grafis, atau
+            website Anda
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="map-frame-box">
+            <iframe
+              title="Lokasi Iqbal Fadil — Banguntapan, Bantul, Yogyakarta"
+              src="https://maps.google.com/maps?q=Banguntapan,%20Bantul,%20Yogyakarta&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <form class="contact-form" id="public-contact-form">
+            <div class="form-row-2">
+              <input
+                type="text"
+                id="c-first-name"
+                class="form-control"
+                placeholder="First Name *"
+                required
+              />
+              <input
+                type="text"
+                id="c-last-name"
+                class="form-control"
+                placeholder="Last Name"
+              />
+            </div>
+
+            <div class="form-row-2">
+              <input
+                type="email"
+                id="c-email"
+                class="form-control"
+                placeholder="Email Address *"
+                required
+              />
+              <select id="c-category" class="form-control">
+                <option value="Fotografi & Liputan Acara">
+                  Fotografi &amp; Liputan Acara
+                </option>
+                <option value="Videografi & Editing">
+                  Videografi &amp; Editing
+                </option>
+                <option value="Desain Grafis & Branding">
+                  Desain Grafis &amp; Branding
+                </option>
+                <option value="Project Coding / Website" selected>
+                  Project Coding / Website
+                </option>
+                <option value="Kolaborasi Organisasi / Riset">
+                  Kolaborasi Organisasi / Riset
+                </option>
+              </select>
+            </div>
+
+            <textarea
+              id="c-body"
+              rows="4"
+              class="form-control"
+              placeholder="Your Message — Ceritakan singkat kebutuhan project atau kolaborasi Anda..."
+              required
+            ></textarea>
+
+            <button type="submit" class="btn-submit-full">
+              <span>➤</span>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- 5. FOOTER CARD -->
+      <footer class="bento-card footer-inner">
+        <div class="footer-grid">
+          <div>
+            <a
+              href="#home"
+              class="brand-logo"
+              style="font-size: 1.25rem"
+              id="footer-brand-name"
+              >Iqbal Fadil<span class="dot">.</span></a
+            >
+            <p class="footer-desc" id="footer-desc"></p>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Navigasi</div>
+            <ul class="footer-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Me &amp; Pendidikan</a></li>
+              <li><a href="#skills">My Skills</a></li>
+              <li><a href="#projects">My Projects &amp; Karya</a></li>
+              <li><a href="#contact">Get In Touch</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Terhubung</div>
+            <p
+              class="footer-desc"
+              style="margin-top: 0"
+              id="footer-location"
+            ></p>
+            <div class="footer-socials">
+              <a
+                id="footer-ig"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                class="footer-social-btn tile-ig"
+                >IG</a
+              >
+              <a
+                id="footer-tt"
+                href="https://tiktok.com"
+                target="_blank"
+                rel="noreferrer"
+                class="footer-social-btn tile-tt font-mono"
+                >TT</a
+              >
+              <a
+                id="footer-gh"
+                href="https://github.com"
+                target="_blank"
+                rel="noreferrer"
+                class="footer-social-btn tile-gh font-mono"
+                >GH</a
+              >
+              <a
+                id="footer-yt"
+                href="https://youtube.com"
+                target="_blank"
+                rel="noreferrer"
+                class="footer-social-btn tile-yt font-mono"
+                >YT</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            <span
+              id="secret-admin-trigger"
+              style="cursor: default; user-select: none"
+              title="Portfolio Copyright"
+              >©</span
+            >
+            2026
+            <strong class="accent-text" id="footer-copy-name"
+              >Iqbal Fadil</strong
+            >. All rights reserved.
+          </div>
+          <div>Crafted with passion in Yogyakarta, Indonesia</div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ======================================================================
+       MODAL 1: WORK DETAIL LIGHTBOX
+  ====================================================================== -->
+    <div class="modal-backdrop" id="work-detail-modal">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div style="display: flex; align-items: center; gap: 0.5rem">
+            <span
+              id="modal-work-cat"
+              style="
+                padding: 0.25rem 0.75rem;
+                border-radius: 9999px;
+                background: #ea580c;
+                color: #fff;
+                font-size: 0.75rem;
+                font-weight: 700;
+              "
+            ></span>
+            <span
+              id="modal-work-year"
+              class="font-mono"
+              style="font-size: 0.75rem; color: var(--text-subtle)"
+            ></span>
+          </div>
+          <button type="button" class="modal-close-btn" id="close-work-modal">
+            ✕
+          </button>
+        </div>
+        <div style="aspect-ratio: 16/9; background: #000; overflow: hidden">
+          <img
+            id="modal-work-img"
+            src=""
+            alt=""
+            style="width: 100%; height: 100%; object-fit: cover"
+          />
+        </div>
+        <div
+          style="
+            padding: 1.5rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+          "
+        >
+          <div>
+            <h3
+              id="modal-work-title"
+              style="font-size: 1.45rem; font-weight: 800"
+            ></h3>
+            <p
+              id="modal-work-subtitle"
+              style="
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: #ea580c;
+                margin-top: 0.2rem;
+              "
+            ></p>
+          </div>
+          <p
+            id="modal-work-desc"
+            style="
+              font-size: 0.85rem;
+              line-height: 1.65;
+              color: var(--text-muted);
+            "
+          ></p>
+          <div
+            style="
+              padding: 1rem;
+              border-radius: 1rem;
+              background: var(--subcard-bg);
+              border: 1px solid var(--subcard-border);
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+              gap: 0.85rem;
+            "
+          >
+            <div>
+              <div
+                class="font-mono"
+                style="
+                  font-size: 0.65rem;
+                  text-transform: uppercase;
+                  color: var(--text-subtle);
+                "
+              >
+                Peran
+              </div>
+              <div
+                id="modal-work-role"
+                style="
+                  font-size: 0.78rem;
+                  font-weight: 700;
+                  margin-top: 0.15rem;
+                "
+              ></div>
+            </div>
+            <div>
+              <div
+                class="font-mono"
+                style="
+                  font-size: 0.65rem;
+                  text-transform: uppercase;
+                  color: var(--text-subtle);
+                "
+              >
+                Spesifikasi / EXIF
+              </div>
+              <div
+                id="modal-work-exif"
+                class="font-mono"
+                style="font-size: 0.75rem; margin-top: 0.15rem"
+              ></div>
+            </div>
+            <div>
+              <div
+                class="font-mono"
+                style="
+                  font-size: 0.65rem;
+                  text-transform: uppercase;
+                  color: var(--text-subtle);
+                "
+              >
+                Tools &amp; Gear
+              </div>
+              <div
+                id="modal-work-tags"
+                style="
+                  font-size: 0.75rem;
+                  font-weight: 600;
+                  margin-top: 0.15rem;
+                "
+              ></div>
+            </div>
+          </div>
+          <div
+            id="modal-work-link-wrap"
+            style="display: flex; justify-content: flex-end"
+          >
+            <a
+              id="modal-work-link"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              class="btn-primary-pill"
+              >Kunjungi Tautan Proyek ↗</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+       MODAL 2: CV SUMMARY PREVIEW
+  ====================================================================== -->
+    <div class="modal-backdrop" id="cv-modal">
+      <div class="modal-card" style="max-width: 42rem; padding: 1.75rem">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid var(--subcard-border);
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+          "
+        >
+          <div>
+            <span
+              class="font-mono"
+              style="
+                padding: 0.2rem 0.6rem;
+                border-radius: 9999px;
+                background: #ffedd5;
+                color: #ea580c;
+                font-size: 0.65rem;
+                font-weight: 700;
+              "
+              >CURRICULUM VITAE · 2026</span
+            >
+            <h3
+              id="cv-name"
+              style="font-size: 1.5rem; font-weight: 800; margin-top: 0.35rem"
+            ></h3>
+            <p
+              id="cv-role"
+              style="font-size: 0.78rem; color: var(--text-muted)"
+            ></p>
+          </div>
+          <button type="button" class="modal-close-btn" id="close-cv-modal">
+            ✕
+          </button>
+        </div>
+        <p
+          id="cv-bio"
+          style="
+            font-size: 0.78rem;
+            line-height: 1.65;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+          "
+        ></p>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+          "
+        >
+          <div>
+            <h4
+              style="
+                font-size: 0.75rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #ea580c;
+                margin-bottom: 0.5rem;
+              "
+            >
+              Pendidikan
+            </h4>
+            <div id="cv-edu-list"></div>
+          </div>
+          <div>
+            <h4
+              style="
+                font-size: 0.75rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #ea580c;
+                margin-bottom: 0.5rem;
+              "
+            >
+              Pengalaman Utama
+            </h4>
+            <div id="cv-exp-list"></div>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--subcard-border);
+            padding-top: 1rem;
+          "
+        >
+          <span
+            id="cv-email"
+            style="font-size: 0.78rem; color: var(--text-muted)"
+          ></span>
+          <button
+            type="button"
+            class="btn-primary-pill"
+            onclick="window.print()"
+          >
+            ⬇ Cetak / Simpan PDF
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+       MODAL 3: ADMIN PIN LOGIN (CTRL+SHIFT+A OR DOUBLE-CLICK © IN FOOTER)
+  ====================================================================== -->
+    <div class="modal-backdrop" id="pin-modal">
+      <div class="modal-card" style="max-width: 26rem; padding: 1.75rem">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--subcard-border);
+            padding-bottom: 0.85rem;
+            margin-bottom: 1rem;
+          "
+        >
+          <span style="font-weight: 700; font-size: 0.9rem"
+            >🔒 Admin CMS Login</span
+          >
+          <button type="button" class="modal-close-btn" id="close-pin-modal">
+            ✕
+          </button>
+        </div>
+        <p
+          style="
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+          "
+        >
+          Masuk ke dashboard admin untuk mengedit profil, foto, skills,
+          pendidikan, pengalaman, dan katalog karya.
+        </p>
+        <form
+          id="pin-login-form"
+          style="display: flex; flex-direction: column; gap: 0.85rem"
+        >
+          <div>
+            <label
+              style="
+                display: block;
+                font-size: 0.75rem;
+                font-weight: 600;
+                margin-bottom: 0.35rem;
+              "
+            >
+              PIN Admin (Default:
+              <span class="font-mono accent-text">1234</span>)
+            </label>
+            <input
+              type="password"
+              id="pin-input-field"
+              class="form-control font-mono"
+              placeholder="••••"
+              style="letter-spacing: 0.35em; font-size: 1rem"
+            />
+            <p
+              id="pin-error-msg"
+              style="
+                color: #ef4444;
+                font-size: 0.72rem;
+                margin-top: 0.3rem;
+                display: none;
+              "
+            ></p>
+          </div>
+          <div style="display: flex; gap: 0.5rem">
+            <button
+              type="submit"
+              class="btn-primary-pill"
+              style="flex: 1; justify-content: center"
+            >
+              Masuk Admin
+            </button>
+            <button type="button" class="btn-outline-pill" id="btn-demo-admin">
+              Mode Demo
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+       MODAL 4: FULL INTERACTIVE ADMIN CMS WORKSPACE
+  ====================================================================== -->
+    <div class="modal-backdrop" id="admin-cms-modal" style="padding: 0.5rem">
+      <div class="admin-shell">
+        <div class="admin-topbar">
+          <div style="display: flex; align-items: center; gap: 0.75rem">
+            <span
+              class="font-mono"
+              style="
+                padding: 0.2rem 0.6rem;
+                border-radius: 9999px;
+                background: #ea580c;
+                font-size: 0.65rem;
+                font-weight: 700;
+              "
+              >ADMIN CMS</span
+            >
+            <div>
+              <div style="font-size: 0.9rem; font-weight: 700">
+                Editor Portofolio
+              </div>
+              <div style="font-size: 0.68rem; color: #a1a1aa">
+                Perubahan tersimpan otomatis di browser (LocalStorage)
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 0.5rem">
+            <button
+              type="button"
+              id="admin-export-btn"
+              style="
+                padding: 0.4rem 0.85rem;
+                border-radius: 9999px;
+                border: none;
+                background: #27272a;
+                color: #fff;
+                font-size: 0.72rem;
+                font-weight: 600;
+                cursor: pointer;
+              "
+            >
+              ⬇ Export JSON
+            </button>
+            <button
+              type="button"
+              id="admin-lock-btn"
+              style="
+                padding: 0.4rem 0.85rem;
+                border-radius: 9999px;
+                border: 1px solid #3f3f46;
+                background: transparent;
+                color: #d4d4d8;
+                font-size: 0.72rem;
+                font-weight: 600;
+                cursor: pointer;
+              "
+            >
+              Kunci
+            </button>
+            <button
+              type="button"
+              id="admin-close-btn"
+              style="
+                padding: 0.4rem 1rem;
+                border-radius: 9999px;
+                border: none;
+                background: #ea580c;
+                color: #fff;
+                font-size: 0.72rem;
+                font-weight: 700;
+                cursor: pointer;
+              "
+            >
+              Selesai
+            </button>
+          </div>
+        </div>
+
+        <div class="admin-tabs" id="admin-tabs-bar">
+          <button type="button" class="admin-tab-btn active" data-tab="profile">
+            1. Profil &amp; Hero
+          </button>
+          <button type="button" class="admin-tab-btn" data-tab="timeline">
+            2. Pendidikan &amp; Pengalaman
+          </button>
+          <button type="button" class="admin-tab-btn" data-tab="skills">
+            3. Skills
+          </button>
+          <button type="button" class="admin-tab-btn" data-tab="works">
+            4. Karya &amp; Project
+          </button>
+          <button
+            type="button"
+            class="admin-tab-btn"
+            data-tab="messages"
+            id="admin-tab-msg-btn"
+          >
+            5. Pesan Masuk
+          </button>
+        </div>
+
+        <div class="admin-body" id="admin-tab-content"></div>
+      </div>
+    </div>
+
+    <!-- FLOATING TOAST NOTIFICATION -->
+    <div class="toast-box" id="toast-box">
+      <span id="toast-icon">✔</span>
+      <span id="toast-text"></span>
+    </div>
+
+    <!-- ======================================================================
+       VANILLA JAVASCRIPT (COMPLETE STATE, RENDERING & ADMIN CMS ENGINE)
+  ====================================================================== -->
+    <script src="script.js"></script>
+  </body>
+</html>
