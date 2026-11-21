@@ -245,7 +245,7 @@
         subtitle: "Poster & Konten Edukasi Lingkungan — Youth Ranger Indonesia",
         description:
           "Seri desain poster kampanye digital untuk memperingati Hari Udara Bersih Internasional bersama Youth Ranger Indonesia Regional Yogyakarta. Mengombinasikan tipografi modern dan pesan aksi hijau.",
-        imageUrl: PORTFOLIO_IMAGES.works["work-6"],
+        imageUrl: "./img/poster.png",
         tags: ["Photoshop", "Figma", "Campaign"],
         metaExif: "1080x1350px · Multi-Slide Visual",
         role: "Visual Designer",
@@ -259,7 +259,7 @@
         subtitle: "Poster & Konten Edukasi Lingkungan — Youth Ranger Indonesia",
         description:
           "Seri desain poster kampanye digital untuk memperingati Hari Udara Bersih Internasional bersama Youth Ranger Indonesia Regional Yogyakarta. Mengombinasikan tipografi modern dan pesan aksi hijau.",
-        imageUrl: PORTFOLIO_IMAGES.works["work-6"],
+        imageUrl: "./img/poster2.png",
         tags: ["Photoshop", "Figma", "Campaign"],
         metaExif: "1080x1350px · Multi-Slide Visual",
         role: "Visual Designer",
