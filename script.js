@@ -1,6 +1,5 @@
 (function () {
-  const STORAGE_KEY = "iqbal_fadil_vanilla_portfolio_v1";
-
+  // Teks dan gambar di DEFAULT_DATA menjadi sumber konten yang ditampilkan.
   // Gunakan URL lengkap atau path relatif dari index.html, misalnya "./img/foto-baru.jpg".
   // Setiap karya baru harus memiliki id unik.
   const PORTFOLIO_IMAGES = {
@@ -22,10 +21,10 @@
 
   const DEFAULT_DATA = {
     profile: {
-      brandName: "Portfolio.",
+      brandName: "Portofolio.",
       greeting: "Hi, I'm Iqbal Fadil",
       name: "Iqbal Fadil",
-      roleTitle: "Information Systems Student & Multidisciplinary Creator",
+      roleTitle: "Information Systems Student",
       heroBio:
         "Mahasiswa S1 Sistem Informasi Universitas Ahmad Dahlan (UAD) Yogyakarta yang memadukan estetika fotografi, sinematografi, dan desain grafis dengan pengembangan sistem web modern.",
       aboutSummary:
@@ -34,13 +33,13 @@
       email: "iqbalfadil.work@gmail.com",
       instagramUrl: "https://instagram.com/fadilif_",
       tiktokUrl: "https://tiktok.com",
-      githubUrl: "https://github.com",
+      githubUrl: "https://github.com/afsansnusa",
       youtubeUrl: "https://youtube.com",
-      portraitUrl: PORTFOLIO_IMAGES.profile,
-      aboutPhotoUrl: PORTFOLIO_IMAGES.about,
+      portraitUrl: "./img/fadil.JPG",
+      aboutPhotoUrl: "./img/iqbal.jpeg",
       stats: [
         { value: "4+", label: "Bidang Karya" },
-        { value: "3rd Sem", label: "S1 SI UAD" },
+        { value: "Sem 3", label: "S1 SI UAD" },
         { value: "10+", label: "Project & Event" },
       ],
     },
@@ -100,182 +99,135 @@
           "Mengelola alur liputan visual pameran Unit Kegiatan Mahasiswa bagi ribuan mahasiswa baru UAD.",
       },
     ],
-    skills: [
-      {
-        id: "sk-1",
-        name: "Photoshop & Lightroom",
-        category: "Fotografi",
-        badge: "Lr",
-        badgeBg: "#001E36",
-        badgeText: "#31A8FF",
-      },
-      {
-        id: "sk-2",
-        name: "Premiere Pro & Video",
-        category: "Videografi",
-        badge: "Pr",
-        badgeBg: "#00005B",
-        badgeText: "#9999FF",
-      },
-      {
-        id: "sk-3",
-        name: "Graphic Design & Figma",
-        category: "Desain Grafis",
-        badge: "Ai",
-        badgeBg: "#330000",
-        badgeText: "#FF9A00",
-      },
-      {
-        id: "sk-4",
-        name: "HTML/CSS & JavaScript",
-        category: "Coding",
-        badge: "JS",
-        badgeBg: "#18181B",
-        badgeText: "#FACC15",
-      },
-      {
-        id: "sk-5",
-        name: "React & Modern Web",
-        category: "Coding",
-        badge: "RC",
-        badgeBg: "#0F172A",
-        badgeText: "#38BDF8",
-      },
-      {
-        id: "sk-6",
-        name: "Laravel & PHP",
-        category: "Coding",
-        badge: "Lv",
-        badgeBg: "#2A0A0A",
-        badgeText: "#F97316",
-      },
-      {
-        id: "sk-7",
-        name: "Python & SQL / ERD",
-        category: "Coding",
-        badge: "DB",
-        badgeBg: "#052E16",
-        badgeText: "#4ADE80",
-      },
-      {
-        id: "sk-8",
-        name: "Google Apps Script",
-        category: "Coding",
-        badge: "GS",
-        badgeBg: "#1E293B",
-        badgeText: "#FB923C",
-      },
-    ],
+
     works: [
       {
         id: "work-1",
-        title: "Dokumentasi & Vlog Museum Muhammadiyah UAD",
+        title: "Dokumentasi Bazar Murah & Jalan Sehat MA Al-Furqan Kebumen",
         category: "Videografi",
-        year: "2026",
+        year: "2023",
         subtitle: "Visual Essay & Liputan Dokumenter Kampus 4 UAD",
         description:
-          "Karya videografi dokumenter bergaya visual-essay yang merekam perjalanan sejarah persyarikatan di Museum Muhammadiyah Kampus 4 Universitas Ahmad Dahlan. Memadukan pergerakan gimbal yang halus, ambient sound design, dan color grading sinematik.",
-        imageUrl: PORTFOLIO_IMAGES.works["work-1"],
-        tags: ["Premiere Pro", "Canon 650D", "Gimbal 4K"],
+          "Dokumentasi video kegiatan bazar murah dan jalan sehat di MA Al-Furqan Kebumen. Menggunakan teknik sinematografi dinamis, transisi halus, dan grading warna Rec.709 untuk menghasilkan aftermovie yang menarik.",
+        imageUrl: "./img/dok1.jpg",
+        tags: ["Capcut", "Canon 650D"],
         metaExif: "1080p 24fps · Rec.709 · 04:32 Min",
         role: "Director, Videographer & Editor",
         link: "https://youtube.com",
       },
       {
         id: "work-2",
-        title: "Infografis: Ketika Alam Berbicara, Karya Menyuarakan",
+        title: "Desain Feed IG Struktural KPUM FAST 2026",
         category: "Desain Grafis",
         year: "2026",
-        subtitle: "Kampanye Visual Kesadaran Pencemaran Ekosistem Sungai",
+        subtitle:
+          "Feed IG Struktural Komisi Pemilihan Umum Mahasiswa FAST UAD 2026",
         description:
-          "Desain infografis editorial yang menerjemahkan data kualitas air sungai dan dampak limbah menjadi narasi visual yang menggugah. Mengusung hierarki tipografi kuat dan ilustrasi vektor organik untuk kampanye publik.",
-        imageUrl: PORTFOLIO_IMAGES.works["work-2"],
-        tags: ["Illustrator", "Figma", "Editorial Grid"],
+          "Seri desain feed Instagram untuk memperkenalkan struktur kepengurusan KPUM FAST UAD 2026. Menggunakan grid editorial yang konsisten, tipografi modern, dan palet warna institusional untuk menciptakan identitas visual yang profesional.",
+        imageUrl: "./img/feedig.png",
+        tags: ["Canva", "Editorial Grid"],
         metaExif: "A2 Print & Carousel Series · 300 DPI",
         role: "Graphic Designer & Visual Storyteller",
         link: "https://instagram.com",
       },
       {
         id: "work-3",
-        title: "Sistem Informasi Akademik (SIAKAD) & ERD Modeling",
+        title: "Landing Page KPUM FAST 2026",
         category: "Project Coding",
         year: "2026",
         subtitle: "Arsitektur Database Relasional & Aplikasi Web Kampus",
         description:
           "Perancangan Entity Relationship Diagram (ERD) ter-normalisasi lengkap dengan purwarupa aplikasi SIAKAD berbasis web untuk pengelolaan KRS mahasiswa, penjadwalan kuliah, dan manajemen nilai dosen.",
-        imageUrl: PORTFOLIO_IMAGES.works["work-3"],
-        tags: ["Laravel", "MySQL", "ERD System"],
+        imageUrl: "./img/webkpum.png",
+        tags: ["HTML/CSS", "JavaScript"],
         metaExif: "18 Tabel Relasional · Role-Based Auth",
-        role: "System Analyst & Fullstack Developer",
-        link: "https://github.com",
+        role: "Frontend Developer & UI/UX Designer",
+        link: "https://afsansnusa.github.io/portofolioku/",
       },
       {
         id: "work-4",
-        title: "Golden Hour & Street Architecture Yogyakarta",
+        title: "Susunan batu dalam mata air",
         category: "Fotografi",
         year: "2026",
-        subtitle: "Kompetisi Motret #5 — Eksplorasi Cahaya & Geometris Ruang",
+        subtitle: "Fotografi Batu dan Air di mata air",
         description:
-          "Seri fotografi arsitektur dan ruang kota Yogyakarta saat golden hour. Mengeksplorasi garis geometris bangunan modern, bayangan kontras, dan perspektif low-angle yang dramatis.",
-        imageUrl: PORTFOLIO_IMAGES.works["work-4"],
-        tags: ["Canon 650D", "Lightroom", "Architecture"],
+          "Fotografi close-up batuan di mata air dengan komposisi simetris dan pencahayaan alami. Menggunakan teknik depth of field untuk menonjolkan tekstur batu dan refleksi cahaya pada permukaan air.",
+        imageUrl: "./img/alam.jpg",
+        tags: ["Canon 1200D", "Lightroom", "Nature"],
         metaExif: "24mm · f/5.6 · 1/500s · ISO 100",
         role: "Photographer & Colorist",
         link: "https://instagram.com",
       },
       {
         id: "work-5",
-        title: "Web Landing Page & Admin Panel MA Al-Furqan Kebumen",
-        category: "Project Coding",
+        title: "Video Perkenalan P2K UAD 2025 style Cinematic",
+        category: "Videografi",
         year: "2026",
-        subtitle: "Portal Resmi Sekolah & Sistem PPDB Berbasis Cloud",
+        subtitle: "Video Perkenalan P2K UAD 2025 dengan Gaya Sinematik",
         description:
-          "Pengembangan website landing page responsif dengan panel administrasi ringan berbasis Google Apps Script dan Blogger XML untuk pengelolaan berita sekolah dan pendaftaran siswa baru secara real-time.",
-        imageUrl: PORTFOLIO_IMAGES.works["work-5"],
-        tags: ["HTML/CSS", "Apps Script", "JavaScript"],
-        metaExif: "Lighthouse Score 98/100 · Cloud Sheet DB",
-        role: "Lead Web Developer & UI Designer",
+          "Sebuah video perkenalan untuk Program Pengenalan Kampus (P2K) Universitas Ahmad Dahlan 2025. Menggunakan teknik sinematografi sinematik, transisi kreatif, dan scoring musik yang imersif untuk menciptakan pengalaman visual yang menarik bagi mahasiswa baru.",
+        imageUrl: "./img/p2k.jpg",
+        tags: ["Redmi A1", "Capcut", "Cinematic Style"],
+        metaExif: "24mm · f/5.6 · 1/500s · ISO 100",
+        role: "Videographer & Editor",
         link: "https://github.com",
       },
       {
         id: "work-6",
-        title: "Kampanye Visual Hari Udara Bersih Internasional",
+        title: "Poster Hari Pancasila",
         category: "Desain Grafis",
-        year: "2025",
-        subtitle: "Poster & Konten Edukasi Lingkungan — Youth Ranger Indonesia",
+        year: "2026",
+        subtitle: "Poster Hari Besar — Youth Ranger Indonesia",
         description:
-          "Seri desain poster kampanye digital untuk memperingati Hari Udara Bersih Internasional bersama Youth Ranger Indonesia Regional Yogyakarta. Mengombinasikan tipografi modern dan pesan aksi hijau.",
+          "Seri desain poster untuk memperingati Hari Pancasila dari Youth Ranger Indonesia Regional Yogyakarta. Mengombinasikan tipografi modern, ilustrasi simbolis, dan palet warna nasional untuk menyampaikan pesan persatuan.",
         imageUrl: "./img/poster.png",
-        tags: ["Photoshop", "Figma", "Campaign"],
+        tags: ["Canva", "Typography"],
         metaExif: "1080x1350px · Multi-Slide Visual",
         role: "Visual Designer",
         link: "https://instagram.com",
       },
       {
         id: "work-7",
-        title: "Kampanye Visual Hari Udara Bersih Internasional",
+        title: "Poster Acara LP4Y",
         category: "Desain Grafis",
-        year: "2025",
-        subtitle: "Poster & Konten Edukasi Lingkungan — Youth Ranger Indonesia",
+        year: "2026",
+        subtitle:
+          "Poster Informasi Pendaftaran Acara LP4Y Cilincing Jakarta Utara",
         description:
-          "Seri desain poster kampanye digital untuk memperingati Hari Udara Bersih Internasional bersama Youth Ranger Indonesia Regional Yogyakarta. Mengombinasikan tipografi modern dan pesan aksi hijau.",
+          "Seri desain poster untuk menginformasikan pendaftaran acara LP4Y di Cilincing, Jakarta Utara. Menggunakan ilustrasi vektor, tipografi tegas, dan palet warna kontras untuk menarik perhatian audiens muda.",
         imageUrl: "./img/poster2.png",
-        tags: ["Photoshop", "Figma", "Campaign"],
-        metaExif: "1080x1350px · Multi-Slide Visual",
+        tags: ["Canva", "Campaign"],
+        metaExif: "1080x1350px · One-Page Visual",
         role: "Visual Designer",
         link: "https://instagram.com",
       },
-    ],
-    messages: [
       {
-        id: "msg-1",
-        firstName: "Raka",
-        lastName: "Pratama",
-        email: "raka.pratama@uad.ac.id",
-        category: "Videografi & Dokumentasi",
-        body: "Halo Iqbal, kami dari panitia Seminar Nasional Saintek UAD tertarik mengajak kolaborasi untuk liputan dokumentasi foto dan aftermovie acara bulan depan.",
-        createdAt: "19 Nov 2026, 15:40",
-        read: false,
+        id: "work-8",
+        title: "Film Pendek Guyub Rukun",
+        category: "Videografi",
+        year: "2023",
+        subtitle: "Film Pendek Toleransi Beragama",
+        description:
+          "Sebuah film pendek yang mengangkat tema toleransi beragama di Indonesia. Menggunakan teknik sinematografi naratif, sound design yang imersif, dan color grading untuk menciptakan suasana emosional yang mendalam.",
+        imageUrl: "./img/filpen1.jpg",
+        tags: ["Capcut", "Redmi note 10 Pro"],
+        metaExif: "1080p 24fps · 04:32 Min",
+        role: "Director, Videographer & Editor",
+        link: "https://youtube.com",
+      },
+      {
+        id: "work-9",
+        title: "Human Interest Story — Dokumentasi Kegiatan di Alam",
+        category: "Fotografi",
+        year: "2026",
+        subtitle: "Fotografi Human Interest Story",
+        description:
+          "Fotografi human interest story yang menampilkan interaksi manusia dengan alam. Menggunakan komposisi candid, pencahayaan alami, dan fokus pada ekspresi emosional subjek untuk menyampaikan narasi visual yang kuat.",
+        imageUrl: "./img/foto1.jpg",
+        tags: ["Canon 1200D", "Lightroom", "Nature"],
+        metaExif: "24mm · f/5.6 · 1/500s · ISO 100",
+        role: "Photographer & Colorist",
+        link: "https://instagram.com",
       },
     ],
   };
@@ -289,51 +241,9 @@
   ];
 
   // App State
-  let siteData = loadSiteData();
-  siteData.profile.portraitUrl = PORTFOLIO_IMAGES.profile;
-  siteData.profile.aboutPhotoUrl = PORTFOLIO_IMAGES.about;
+  const siteData = JSON.parse(JSON.stringify(DEFAULT_DATA));
   let activeWorkCategory = "Semua";
   let showAllWorks = false;
-
-  function loadSiteData() {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        const savedWorks = Array.isArray(parsed.works) ? parsed.works : [];
-        const savedWorksById = new Map(
-          savedWorks
-            .filter((work) => work && typeof work.id === "string")
-            .map((work) => [work.id, work]),
-        );
-        const works = DEFAULT_DATA.works.map((defaultWork) => {
-          const savedWork = savedWorksById.get(defaultWork.id);
-          savedWorksById.delete(defaultWork.id);
-          return savedWork
-            ? { ...defaultWork, ...savedWork, imageUrl: defaultWork.imageUrl }
-            : { ...defaultWork };
-        });
-
-        return {
-          ...DEFAULT_DATA,
-          ...parsed,
-          profile: { ...DEFAULT_DATA.profile, ...(parsed.profile || {}) },
-          works: [...works, ...savedWorksById.values()],
-        };
-      }
-    } catch (err) {
-      console.error(err);
-    }
-    return JSON.parse(JSON.stringify(DEFAULT_DATA));
-  }
-
-  function saveSiteData() {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(siteData));
-    } catch (err) {
-      console.error(err);
-    }
-  }
 
   function escapeHtml(str) {
     return String(str || "")
@@ -341,19 +251,6 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
-  }
-
-  let toastTimer = null;
-  function showToast(msg, isError = false) {
-    const box = document.getElementById("toast-box");
-    const icon = document.getElementById("toast-icon");
-    const text = document.getElementById("toast-text");
-    icon.textContent = isError ? "⚠" : "✔";
-    icon.style.color = isError ? "#F87171" : "#FB923C";
-    text.textContent = msg;
-    box.classList.add("show");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => box.classList.remove("show"), 3400);
   }
 
   // ======================================================================
@@ -416,27 +313,11 @@
                 <span class="timeline-title">${escapeHtml(exp.role)}</span>
                 <span class="timeline-badge font-mono">${escapeHtml(exp.period)}</span>
               </div>
-              <div class="timeline-sub" style="color: var(--text-muted);">${escapeHtml(exp.organization)} · <span class="font-mono">${escapeHtml(exp.type)}</span></div>
+              <div class="timeline-sub">${escapeHtml(exp.organization)} · ${escapeHtml(exp.type)}</div>
               <p class="timeline-desc">${escapeHtml(exp.description)}</p>
             </div>`,
         )
         .join("");
-
-    // Skills
-    document.getElementById("skills-grid-container").innerHTML = siteData.skills
-      .map(
-        (sk) => `
-            <div class="skill-card">
-              <span class="skill-badge font-mono" style="background:${escapeHtml(sk.badgeBg || "#18181B")}; color:${escapeHtml(sk.badgeText || "#FB923C")};">
-                ${escapeHtml(sk.badge)}
-              </span>
-              <div>
-                <div class="skill-name">${escapeHtml(sk.name)}</div>
-                <div class="skill-cat">${escapeHtml(sk.category)}</div>
-              </div>
-            </div>`,
-      )
-      .join("");
 
     // Works Filter & Grid
     renderWorksSection();
@@ -447,10 +328,14 @@
     document.getElementById("footer-desc").textContent =
       `Portofolio karya Fotografi, Videografi, Desain Grafis, dan Project Coding oleh ${p.name} — Mahasiswa Sistem Informasi UAD Yogyakarta.`;
     document.getElementById("footer-location").textContent = p.location;
+    const footerEmail = document.getElementById("footer-email");
+    footerEmail.href = `mailto:${p.email}`;
+    footerEmail.textContent = p.email;
     document.getElementById("footer-copy-name").textContent = p.name;
-    document.getElementById("footer-ig").href = p.instagramUrl;
+    document.getElementById("footer-ig").href =
+      "https://instagram.com/fadilif_";
     document.getElementById("footer-tt").href = p.tiktokUrl;
-    document.getElementById("footer-gh").href = p.githubUrl;
+    document.getElementById("footer-gh").href = "https://github.com/afsansnusa";
     document.getElementById("footer-yt").href = p.youtubeUrl;
   }
 
@@ -503,14 +388,11 @@
                   <div class="project-body">
                     <h3 class="project-title" data-work-id="${escapeHtml(work.id)}">${escapeHtml(work.title)}</h3>
                     <p class="project-desc">${escapeHtml(work.description)}</p>
-                    <div class="project-tags">
+                    <div class="project-tags" aria-label="Perangkat dan catatan karya">
                       ${(work.tags || [])
                         .slice(0, 3)
-                        .map(
-                          (t) =>
-                            `<span class="project-tag font-mono">${escapeHtml(t)}</span>`,
-                        )
-                        .join("")}
+                        .map((tag) => escapeHtml(tag))
+                        .join(" · ")}
                     </div>
                   </div>
                 </div>
@@ -699,43 +581,6 @@
   mobileDropdown.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => mobileDropdown.classList.remove("open"));
   });
-
-  // Contact Form Submit
-  document
-    .getElementById("public-contact-form")
-    .addEventListener("submit", (e) => {
-      e.preventDefault();
-      const firstName = document.getElementById("c-first-name").value.trim();
-      const lastName = document.getElementById("c-last-name").value.trim();
-      const email = document.getElementById("c-email").value.trim();
-      const category = document.getElementById("c-category").value;
-      const body = document.getElementById("c-body").value.trim();
-
-      if (!firstName || !email || !body) {
-        showToast("Mohon isi nama depan, email, dan pesan Anda.", true);
-        return;
-      }
-
-      siteData.messages.unshift({
-        id: `msg-${Date.now()}`,
-        firstName,
-        lastName,
-        email,
-        category,
-        body,
-        createdAt: new Date().toLocaleString("id-ID", {
-          day: "2-digit",
-          month: "short",
-          year: "numeric",
-          hour: "2-digit",
-          minute: "2-digit",
-        }),
-        read: false,
-      });
-      saveSiteData();
-      e.target.reset();
-      showToast("Pesan tersimpan di browser ini.");
-    });
 
   // Initialize App
   renderAll();
