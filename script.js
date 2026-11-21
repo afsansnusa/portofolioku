@@ -1,23 +1,22 @@
 (function () {
   const STORAGE_KEY = "iqbal_fadil_vanilla_portfolio_v1";
 
-  // Ganti path di sini dengan foto lain, misalnya "img/foto-baru.jpg".
+  // Gunakan URL lengkap atau path relatif dari index.html, misalnya "./img/foto-baru.jpg".
+  // Setiap karya baru harus memiliki id unik.
   const PORTFOLIO_IMAGES = {
     profile: "img/fadil.JPG",
     about: "img/iqbal.jpeg",
     works: {
       "work-1":
         "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=85",
-      "work-2":
-        "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=1200&q=85",
+      "work-2": "./img/invite.png",
       "work-3":
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85",
       "work-4":
         "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=85",
       "work-5":
         "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=85",
-      "work-6":
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=85",
+      "work-6": "./img/poster.png",
     },
   };
 
@@ -33,7 +32,7 @@
         "Berdomisili di Banguntapan, Bantul, Yogyakarta. Saya percaya karya terbaik lahir dari perpaduan kepekaan visual yang jujur dan arsitektur teknologi yang terstruktur. Aktif memimpin inovasi riset mahasiswa di PKM Center UAD serta berkontribusi di berbagai gerakan kreatif dan kepemudaan.",
       location: "Banguntapan, Bantul, Yogyakarta, Indonesia",
       email: "iqbalfadil.work@gmail.com",
-      instagramUrl: "https://instagram.com",
+      instagramUrl: "https://instagram.com/fadilif_",
       tiktokUrl: "https://tiktok.com",
       githubUrl: "https://github.com",
       youtubeUrl: "https://youtube.com",
@@ -252,6 +251,20 @@
         role: "Visual Designer",
         link: "https://instagram.com",
       },
+      {
+        id: "work-7",
+        title: "Kampanye Visual Hari Udara Bersih Internasional",
+        category: "Desain Grafis",
+        year: "2025",
+        subtitle: "Poster & Konten Edukasi Lingkungan — Youth Ranger Indonesia",
+        description:
+          "Seri desain poster kampanye digital untuk memperingati Hari Udara Bersih Internasional bersama Youth Ranger Indonesia Regional Yogyakarta. Mengombinasikan tipografi modern dan pesan aksi hijau.",
+        imageUrl: PORTFOLIO_IMAGES.works["work-6"],
+        tags: ["Photoshop", "Figma", "Campaign"],
+        metaExif: "1080x1350px · Multi-Slide Visual",
+        role: "Visual Designer",
+        link: "https://instagram.com",
+      },
     ],
     messages: [
       {
@@ -279,11 +292,6 @@
   let siteData = loadSiteData();
   siteData.profile.portraitUrl = PORTFOLIO_IMAGES.profile;
   siteData.profile.aboutPhotoUrl = PORTFOLIO_IMAGES.about;
-  siteData.works.forEach((work) => {
-    if (PORTFOLIO_IMAGES.works[work.id]) {
-      work.imageUrl = PORTFOLIO_IMAGES.works[work.id];
-    }
-  });
   let activeWorkCategory = "Semua";
   let showAllWorks = false;
 
@@ -292,10 +300,25 @@
       const raw = localStorage.getItem(STORAGE_KEY);
       if (raw) {
         const parsed = JSON.parse(raw);
+        const savedWorks = Array.isArray(parsed.works) ? parsed.works : [];
+        const savedWorksById = new Map(
+          savedWorks
+            .filter((work) => work && typeof work.id === "string")
+            .map((work) => [work.id, work]),
+        );
+        const works = DEFAULT_DATA.works.map((defaultWork) => {
+          const savedWork = savedWorksById.get(defaultWork.id);
+          savedWorksById.delete(defaultWork.id);
+          return savedWork
+            ? { ...defaultWork, ...savedWork, imageUrl: defaultWork.imageUrl }
+            : { ...defaultWork };
+        });
+
         return {
           ...DEFAULT_DATA,
           ...parsed,
           profile: { ...DEFAULT_DATA.profile, ...(parsed.profile || {}) },
+          works: [...works, ...savedWorksById.values()],
         };
       }
     } catch (err) {

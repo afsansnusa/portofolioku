@@ -2,7 +2,7 @@
        1. CSS VARIABLES & RESET (PURE VANILLA CSS — NO TAILWIND)
     ======================================================================== */
 :root {
-  --bg-page: #071b2b;
+  --bg-page: #dbeafe;
   --card-bg: #ffffff;
   --card-border: rgba(255, 255, 255, 0.85);
   --subcard-bg: #fafafa;
@@ -42,6 +42,7 @@
 }
 
 body.dark-mode {
+  --bg-page: #0c3553;
   --card-bg: #18181b;
   --card-border: #27272a;
   --subcard-bg: #222226;
@@ -1370,6 +1371,21 @@ select {
   top: 0;
   background: var(--card-bg);
   z-index: 5;
+}
+
+.modal-work-image-wrap {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.modal-work-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 65vh;
+  object-fit: contain;
 }
 
 .modal-close-btn {
