@@ -113,7 +113,7 @@
         tags: ["Capcut", "Canon 650D"],
         metaExif: "1080p 24fps · Rec.709 · 04:32 Min",
         role: "Director, Videographer & Editor",
-        link: "https://youtube.com",
+        link: "https://youtu.be/W4VnOJYBh90?si=Ne9LqvN6Pq1WL_m-",
       },
       {
         id: "work-2",
@@ -128,7 +128,7 @@
         tags: ["Canva", "Editorial Grid"],
         metaExif: "A2 Print & Carousel Series · 300 DPI",
         role: "Graphic Designer & Visual Storyteller",
-        link: "https://instagram.com",
+        link: "https://instagram.com/kpumfast",
       },
       {
         id: "work-3",
@@ -142,7 +142,7 @@
         tags: ["HTML/CSS", "JavaScript"],
         metaExif: "18 Tabel Relasional · Role-Based Auth",
         role: "Frontend Developer & UI/UX Designer",
-        link: "https://afsansnusa.github.io/portofolioku/",
+        link: "https://afsansnusa.github.io/web_kpum_fast/",
       },
       {
         id: "work-4",
@@ -170,7 +170,7 @@
         tags: ["Redmi A1", "Capcut", "Cinematic Style"],
         metaExif: "24mm · f/5.6 · 1/500s · ISO 100",
         role: "Videographer & Editor",
-        link: "https://github.com",
+        link: "https://youtu.be/gY05EUVVkPU?si=Vc0dmUQL6vDSmryW",
       },
       {
         id: "work-6",
@@ -184,7 +184,7 @@
         tags: ["Canva", "Typography"],
         metaExif: "1080x1350px · Multi-Slide Visual",
         role: "Visual Designer",
-        link: "https://instagram.com",
+        link: "https://www.instagram.com/p/DZCQ8qCkWYT/?utm_source=ig_web_copy_link&lqvp=MzRlODBiNWFlZA==&avpt=MzRlODBiNWFlZA==",
       },
       {
         id: "work-7",
@@ -213,7 +213,7 @@
         tags: ["Capcut", "Redmi note 10 Pro"],
         metaExif: "1080p 24fps · 04:32 Min",
         role: "Director, Videographer & Editor",
-        link: "https://youtube.com",
+        link: "https://youtu.be/RvYkqapbOA0?si=VKVNEsyhY1EC4wE1",
       },
       {
         id: "work-9",
@@ -228,6 +228,21 @@
         metaExif: "24mm · f/5.6 · 1/500s · ISO 100",
         role: "Photographer & Colorist",
         link: "https://instagram.com",
+      },
+      {
+        id: "work-10",
+        title: "Bebas Berkarya: Film Pendek FLS2N 2023 Kebumen",
+        category: "Videografi",
+        year: "2026",
+        subtitle:
+          "Film Pendek untuk lomba FLS2N 2023 tingkat Kabupaten Kebumen",
+        description:
+          "Sebuah film pendek yang dibuat untuk lomba Festival Lomba Seni Siswa Nasional (FLS2N) 2023 tingkat Kabupaten Kebumen. Menggunakan teknik sinematografi kreatif, narasi yang kuat, dan editing yang dinamis untuk menyampaikan pesan kebebasan berekspresi melalui seni.",
+        imageUrl: "./img/filpen2.jpg",
+        tags: ["Canon 1200D", "Capcut", "Short Movie"],
+        metaExif: "24mm · f/5.6 · 1/500s · ISO 100",
+        role: "Photographer & Colorist",
+        link: "https://youtu.be/cg-wqiRyc1M?si=y1-nE6cQcro4DTUm",
       },
     ],
   };

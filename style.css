@@ -613,7 +613,7 @@ select {
   border-radius: 1rem;
   background: var(--subcard-bg);
   border: 1px solid var(--subcard-border);
-  font-size: 0.78rem;
+  font-size: 1rem;
   line-height: 1.65;
   color: var(--text-muted);
 }
@@ -637,7 +637,7 @@ select {
 }
 
 .stat-lbl {
-  font-size: 0.68rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-muted);
 }
@@ -728,14 +728,14 @@ select {
 
 .timeline-badge {
   color: var(--text-subtle);
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   font-weight: 400;
   white-space: nowrap;
 }
 
 .timeline-sub {
   color: var(--text-muted);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   line-height: 1.5;
   margin-top: 0.15rem;
 }
