@@ -244,6 +244,20 @@
         role: "Photographer & Colorist",
         link: "https://youtu.be/cg-wqiRyc1M?si=y1-nE6cQcro4DTUm",
       },
+      {
+        id: "work-11",
+        title: "Website CBT MA Al-Furqan Kebumen",
+        category: "Project Coding",
+        year: "2026",
+        subtitle: "Sistem Ujian Berbasis Web untuk Sekolah Menengah Atas",
+        description:
+          "Perancangan dan pengembangan aplikasi web berbasis CBT (Computer-Based Test) untuk MA Al-Furqan Kebumen. Menggunakan HTML, CSS, dan JavaScript untuk membangun antarmuka pengguna yang responsif, serta mengimplementasikan logika ujian dan manajemen hasil secara efisien.",
+        imageUrl: "./img/CBT.png",
+        tags: ["HTML/CSS", "JavaScript", "Supabase"],
+        metaExif: "Responsive Web App · Role-Based Auth",
+        role: "Frontend Developer & UI/UX Designer",
+        link: "https://maalfurqankebumen.blogspot.com/2026/11/web-cbt.html",
+      },
     ],
   };
 
@@ -259,6 +273,7 @@
   const siteData = JSON.parse(JSON.stringify(DEFAULT_DATA));
   let activeWorkCategory = "Semua";
   let showAllWorks = false;
+  let revealObserver;
 
   function escapeHtml(str) {
     return String(str || "")
@@ -266,6 +281,46 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  function initRevealAnimations() {
+    if (!("IntersectionObserver" in window)) {
+      document
+        .querySelectorAll(".reveal-up")
+        .forEach((el) => el.classList.add("is-visible"));
+      return;
+    }
+
+    if (!revealObserver) {
+      revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -40px",
+        },
+      );
+    }
+
+    const targets = document.querySelectorAll(
+      "#home, #about, #projects, .footer-inner, .about-header, .projects-header, .project-card, .timeline-item",
+    );
+
+    targets.forEach((el, index) => {
+      el.classList.add("reveal-up");
+      if (!el.classList.contains("is-visible")) {
+        if (el.matches(".project-card")) {
+          el.style.setProperty("--reveal-delay", `${(index % 6) * 70}ms`);
+        }
+        revealObserver.observe(el);
+      }
+    });
   }
 
   // ======================================================================
@@ -452,6 +507,8 @@
     } else {
       moreWrap.style.display = "none";
     }
+
+    initRevealAnimations();
   }
 
   // ======================================================================
@@ -578,9 +635,19 @@
     });
 
   // Theme Toggle
+  const savedTheme = localStorage.getItem("portfolio-theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+  if (document.body.classList.contains("dark-mode")) {
+    document.getElementById("theme-icon").innerHTML =
+      '<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>';
+  }
+
   document.getElementById("theme-toggle-btn").addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
     const isDark = document.body.classList.contains("dark-mode");
+    localStorage.setItem("portfolio-theme", isDark ? "dark" : "light");
     document.getElementById("theme-icon").innerHTML = isDark
       ? '<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>'
       : '<svg class="ui-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"/></svg>';
@@ -599,4 +666,5 @@
 
   // Initialize App
   renderAll();
+  initRevealAnimations();
 })();
