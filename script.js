@@ -28,7 +28,7 @@
       heroBio:
         "Mahasiswa S1 Sistem Informasi Universitas Ahmad Dahlan (UAD) Yogyakarta yang memadukan estetika fotografi, sinematografi, dan desain grafis dengan pengembangan sistem web modern.",
       aboutSummary:
-        "Berdomisili di Banguntapan, Bantul, Yogyakarta. Saya percaya karya terbaik lahir dari perpaduan kepekaan visual yang jujur dan arsitektur teknologi yang terstruktur. Aktif memimpin inovasi riset mahasiswa di PKM Center UAD serta berkontribusi di berbagai gerakan kreatif dan kepemudaan.",
+        "Hai hai haiii, salam kenal semua! Selamat datang di portofolioku ini yah hehe, jangan lupa cek karya-karyaku di bagian Projects dan happy surving yah! Good luck and have a nice day! Salam hangat, Iqbal Fadil.",
       location: "Banguntapan, Bantul, Yogyakarta, Indonesia",
       email: "iqbalfadil.work@gmail.com",
       instagramUrl: "https://instagram.com/fadilif_",
